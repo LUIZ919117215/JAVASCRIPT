@@ -11,29 +11,51 @@
             color: white;
             font:  normal 18pt Arial;
         }
+
+        div#msg {
+            font-family: 'Times New Roman', Times, serif;
+        }
     </style>
 </head>
 <body>
     <h1>Iniciando estudos com DOM</h1>
-
+    
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
-
-    <div id="botao" class="msg" >Clique em mim</div>
+    
+    <div class="divv">Ola mundo</div>
+    
+    <div name="carro"> Ooooooooooooo</div>
+    
+    <div id="botao">Clique em mim</div>
+    
+    <div id="msg">Não</div>
 
     <script>
-         
+        let p1 = window.document.getElementsByTagName(`p`)[1]
         let corpo = window.document.body
-        let p1 = window.document.getElementsByTagName('p')[1]
-        let di = window.document.getElementById('botao')
-        let ddd = window.document.getElementsByTagName('div')[1]
+        let i = document.getElementById('botao')
+        let ca = document.getElementsByName('carro')[0]
+        let d3 = document.getElementsByClassName('divv')[0]
+        let da = window.document.querySelector('div#msg')
 
+        p1.style.color = 'blue'
+        p1.style.textAlign = 'right'
+        p1.style.backgroundColor = 'yellow'
         
+        window.document.write(`Está escrito assim: ${p1.innerHTML}`)
+
+        i.style.backgroundColor = 'black'
+        i.innerText = 'não'
+
+        ca.style.color='violet'
+        ca.innerHTML='<strong>vruuuuu</strong>'
+
+        d3.style.textAlign = 'center'
         
-        p1.style.backgroundColor = 'blue'
-
-
+        da.style.border = '3px solid black'
+        //corpo.style.backgroundColor = 'black'
     </script>
-    <div>Não</div>
+
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Boas-vindas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            height: 50px;
+            width: 150px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boas-vindas</h1>
+
+    <button class="bbb">inicie o desafio</button>
+
+    <script>
+        let bott = window.document.querySelector('button.bbb')
+
+        bott.addEventListener('click', desafio)
+
+        function desafio() {
+            let a = window.prompt('Qual é o seu nome?')
+            let i =window.prompt(`Óla,${a}! Quantos anos você tem?`)
+
+            window.alert(`Acabei de conhecer ${a},que tem ${i} anos de idade! `)
+
+        }
+    </script>
+</body>
+</html>
